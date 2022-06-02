@@ -55,8 +55,8 @@ const doTransaction = async (req, res) => {
       const getUserData = await User.findOne({ userid: parseInt(getUser) });
 
       if (parseInt(amount) > parseInt(sendUserData.balance)) {
-        res.status(402).send({
-          code: 402,
+        res.status(400).send({
+          code: 400,
           message: "Amount is greater than available balance",
         });
         return;
@@ -90,8 +90,8 @@ const doTransaction = async (req, res) => {
       const newTransaction = new Transaction(transactionObj);
       const saveTransaction = await newTransaction.save();
 
-      res.status(200).send({
-        code: 200,
+      res.status(201).send({
+        code: 201,
         message: "Transaction Successfull",
         sendUserData: updatedSendData,
         getUserData: updatedGetData,
