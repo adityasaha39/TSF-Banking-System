@@ -1,6 +1,12 @@
 const router = require("express").Router();
-const { getAllUser } = require("../controllers/banking.controller");
+const {
+  getAllUsers,
+  getUserById,
+  doTransaction,
+} = require("../controllers/banking.controller");
 
-router.get("/alluser", getAllUser);
+router.get("/allusers", getAllUsers);
+router.get("/user/:id", getUserById);
+router.patch("/transaction", doTransaction);
 
 module.exports = router;
