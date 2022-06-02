@@ -90,8 +90,8 @@ const doTransaction = async (req, res) => {
       const newTransaction = new Transaction(transactionObj);
       const saveTransaction = await newTransaction.save();
 
-      res.status(402).send({
-        code: 204,
+      res.status(200).send({
+        code: 200,
         message: "Transaction Successfull",
         sendUserData: updatedSendData,
         getUserData: updatedGetData,
@@ -107,4 +107,21 @@ const doTransaction = async (req, res) => {
   }
 };
 
-module.exports = { getAllUsers, getUserById, doTransaction };
+const getAllTransactions = async (req, res) => {
+  try {
+    const allTransaction = await Transaction.find({});
+    res.status(200).send(allTransaction);
+  } catch (error) {
+    res.status(500).send({
+      code: 500,
+      message: "Unable to fetch all transcations",
+    });
+  }
+};
+
+module.exports = {
+  getAllUsers,
+  getUserById,
+  doTransaction,
+  getAllTransactions,
+};
