@@ -1,0 +1,5 @@
+.alluser-container {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+}
