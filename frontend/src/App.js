@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Homepage from "./pages/HomePage/Homepage";
 import AllUsers from "./pages/AllUsers/AllUsers";
 import UserById from "./pages/UserById/UserById";
+import Transaction from "./pages/Transaction/Transaction";
 import Footer from "./components/Footer/Footer";
 
 export const config = {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/allusers" element={<AllUsers />} />
         <Route path="/user/:id" element={<UserById />} />
+        <Route path="/transaction" element={<Transaction />} />
       </Routes>
       <Footer />
     </>
