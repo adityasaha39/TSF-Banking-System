@@ -4,6 +4,7 @@ import Homepage from "./pages/HomePage/Homepage";
 import AllUsers from "./pages/AllUsers/AllUsers";
 import UserById from "./pages/UserById/UserById";
 import Transaction from "./pages/Transaction/Transaction";
+import AllTransactions from "./pages/AllTransactions/AllTransactions";
 import Footer from "./components/Footer/Footer";
 
 export const config = {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/allusers" element={<AllUsers />} />
         <Route path="/user/:id" element={<UserById />} />
         <Route path="/transaction" element={<Transaction />} />
+        <Route path="/alltransactions" element={<AllTransactions />} />
       </Routes>
       <Footer />
     </>

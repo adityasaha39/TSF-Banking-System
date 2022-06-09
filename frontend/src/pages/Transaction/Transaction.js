@@ -131,7 +131,7 @@ export default class Transaction extends Component {
         message: response.message,
       });
     }
-    console.log(response, errored);
+    // console.log(response, errored);
   };
 
   checkSenderId = async () => {

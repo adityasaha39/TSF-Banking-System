@@ -1,6 +1,6 @@
-.alluser-container {
-  min-height: 65vh;
+.alltransaction-container {
   display: flex;
   justify-content: center;
   padding: 3rem;
+  min-height: 50vh;
 }
